@@ -436,6 +436,7 @@ footer {
 </head>
 
 <body>
+<audio src="happybirthday.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
   <h3 id="opent">click here →</h3>
   <img src="ayush.jpg" id="ayush">
   <div class="confetti"></div>
@@ -591,6 +592,11 @@ function onChange(e) {
   document.body.setAttribute('data-type', e.currentTarget.value);
   confettiPlayers.forEach(player => player.playbackRate = e.currentTarget.value === 'bookmarks' ? 2 : 1);
 }
+</script>
+<script type="text/javascript">
+window.onload=function(){
+    document.getElementById("my_audio").play();
+  }
 </script>
 
 </html>
