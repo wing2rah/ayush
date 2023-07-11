@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>ayush birthday</title>
   <style>
     @import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
@@ -465,11 +465,16 @@ footer {
 .msgpause{
   margin: 15px;
 }
+.fil{
+height:86vh;
+width:100%;
+	}
   </style>
 	
 </head>
 
-<body onload="addEvent()">
+<body>
+<div class="fil" id="fil" onclick="addEvent()"></div>
   <div class="msg" id="msgpause">
     <p class="msgpause">ok...audio 
     paused..
@@ -638,7 +643,7 @@ function onChange(e) {
 
 <script>
       function addEvent(){
-         document.body.addEventListener("click", play)
+         document.getElementById("fil").onclick=play();
        }
       function play() {
         var audio = document.getElementById("audiobtn");
