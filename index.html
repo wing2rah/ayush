@@ -475,7 +475,7 @@ footer {
     paused..
     enjoy😊</p>
   </div>
-  <button class="btnpause" id="btnpas">pause audio</button>
+  <button class="btnpause" onclick="btnpaus()" id="btnpas">pause audio</button>
 <audio src="happybirthday.mp3" id="audiobtn" loop="loop" autoplay="autoplay"></audio>
   <h3 id="opent">click here →</h3>
   <img src="ayush.jpg" id="ayush">
@@ -644,12 +644,12 @@ function onChange(e) {
         var audio = document.getElementById("audiobtn");
         audio.play();
       }
+    function btnpaus(){
+	var audio=document.getElementById("audiobtn");
+	    audio.pause();
+	document.getElementById("msgpause").style.scale="1";
+    }
 	</script>
-<script>
-  document.getElementById('btnpas').onclick=function(){
-    audio.pause();
-    document.getElementById('msgpause').style.scale="1";
-  }
-</script>
+
 
 </html>
