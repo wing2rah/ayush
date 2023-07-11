@@ -431,11 +431,51 @@ footer {
   right: 50px;
   z-index: 1;
 }
+.btnpause{
+  height: 35px;
+  width: 30%;
+  border: 1px solid blueviolet;
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  scale: 1;
+  transition: 0.3s;
+  border-radius: 8px;
+  background: mediumpurple;
+}
+.btnpause:hover{
+  
+  scale: 1.2;
+}
+.msg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height :100px;
+  width: 30%;
+  border: 1px solid mediumpurple;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 55px;
+  left: 10%;
+  transition: 0.5s;
+  scale: 0;
+  
+}
+.msgpause{
+  margin: 15px;
+}
   </style>
 	
 </head>
 
 <body onload="addEvent()">
+  <div class="msg" id="msgpause">
+    <p class="msgpause">ok...audio 
+    paused..
+    enjoy😊</p>
+  </div>
+  <button class="btnpause" id="btnpas">pause audio</button>
 <audio src="happybirthday.mp3" id="audiobtn" loop="loop" autoplay="autoplay"></audio>
   <h3 id="opent">click here →</h3>
   <img src="ayush.jpg" id="ayush">
@@ -605,5 +645,11 @@ function onChange(e) {
         audio.play();
       }
 	</script>
+<script>
+  document.getElementById('btnpas').onclick=function(){
+    audio.pause();
+    document.getElementById('msgpause').style.scale="1";
+  }
+</script>
 
 </html>
